@@ -59,7 +59,8 @@ if ($prueba!=0)
         }
 
         #$resul=mysqli_query($conexion,"SELECT * FROM acceso where login='$usuario' AND clave=md5('$clave');");
-        $resul = mysqli_query($conexion, "INSERT INTO acceso values('".$usuario."',md5('".$clave."'),'".$nya."');");
+        mysqli_query($conexion, "INSERT INTO acceso values('".$usuario."',md5('".$clave."'),'".$nya."');");
+        $resul=mysqli_query($conexion,"SELECT * FROM acceso where login='$usuario'");
 
         // Si no pudo realizarse la consulta...
         if(!$resul)
