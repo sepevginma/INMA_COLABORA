@@ -29,7 +29,7 @@ if ($prueba!=0)
     {
         echo "Usuario sanatizado despues del primer filtro: $prueba<br><br>\n";
         //Conecta con el servidor (en versiones anteriores la clave de root era ""):
-        $conexion=mysqli_connect("localhost","root","ejemplo");
+        $conexion=mysqli_connect("localhost","root","");
 
         $usuario = mysqli_real_escape_string($conexion, $usuario);
         echo "Usuario sanatizado despues del segundo filtro: $usuario<br><br>\n";
