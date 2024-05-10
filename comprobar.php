@@ -73,7 +73,9 @@ mysqli_close($conexion);
 
 ?>
 
-
+<form action="altas.html" method="post">
+	<input type="submit" name=rAltas value="Ir a altas">
+</form>
 
 </body>
 </html>
